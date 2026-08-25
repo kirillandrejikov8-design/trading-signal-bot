@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: trading-signal-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: 8955118045:AAF3HCj2qbpkTwcQK5HVus00RgwpNj0CaCc
+      - key: ADMIN_CHAT_ID
+        value: 1056625687
+        Add render.yaml with env vars
